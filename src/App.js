@@ -1,6 +1,6 @@
 import React from 'react'
-import BookMainPage from './BookMainPage'
-//import BookSearchPage from './BookSearchPage'
+import BookMainPage from './components/bookMainPage'
+import BookSearchPage from './components/bookSearchPage'
 import * as BooksAPI from './utils/BooksAPI'
 import './App.css'
 
