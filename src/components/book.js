@@ -4,6 +4,7 @@ class Book extends Component {
     state = {}
 
     render() {
+        
       const book = this.props.book
       const updateBookShelf = this.props.updateBookShelf
       const currentShelf = this.props.currentShelf
@@ -36,7 +37,7 @@ class Book extends Component {
             <div className="book-title">{book.title}</div>
             <div className="book-authors">{book.authors}</div>
         </div>
-      )
+     )
   }
 }
 
