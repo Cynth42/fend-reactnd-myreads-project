@@ -74,7 +74,7 @@ These resources were very useful in understanding how to build this project:
 * [React Docs](https://reactjs.org/)
 * [create React documentation](https://github.com/facebookincubator/create-react-app)
 * [React Router Documentation](https://www.npmjs.com/package/react-router-dom)
-* [YouTube](https://www.youtube.com/watch?v=i6L2jLHV9j8) - Maeva's walkthrough webinar
+* [Maeva's](https://www.youtube.com/watch?v=i6L2jLHV9j8) - Helped me understand the search function.
 
 
 ## Credits
