@@ -56,7 +56,7 @@ class BookShelf extends Component {
           </div>
       </div>
       )
-    }
- }
+   }
+}
 
 export default BookShelf
