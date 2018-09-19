@@ -9,16 +9,13 @@ class SearchBooks extends Component {
     booksShowing: []
   }
 /**
- * Maeva's walkthrough webinar:
- * https://www.youtube.com/watch?v=i6L2jLHV9j8 helped
- * me understand how to build the search query.  The search function
- * takes a query. The books that matched the query are displayed. If
- * there is no match for the query, the fetch will return an empty
- * array. Users are able to search for multiple words within the
- * search terms.  Search works when there is no thumbnail or authors.
- * If the query throws an error, the fetch request returns an empty
- * array. There are no books shown when the search input box's text
- * are deleted.
+ * The search function takes a query. The books that matched the 
+ * query are displayed. If there is no match for the query, 
+ * the fetch request will return an empty array. Users are able to 
+ * search for multiple words within the search terms.  Search works when 
+ * there is no thumbnail or authors. If the query throws an error, the 
+ * fetch request returns an empty array. There are no books shown 
+ * when the search input box's text are deleted.
  */
   updateQuery = (newQuery) => {
   this.setState({
