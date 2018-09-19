@@ -4,7 +4,6 @@ import * as BooksAPI from '../utils/BooksAPI'
 import { Link } from 'react-router-dom';
 
 class SearchBooks extends Component {
-
   state = {
     query: "",
     booksShowing: []
@@ -87,7 +86,7 @@ class SearchBooks extends Component {
           </div>
         </div>
       );
-    }
+   }
 }
 
 export default SearchBooks
