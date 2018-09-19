@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import BookShelf from './bookShelf'
+import BookShelf from './BookShelf'
 import { Link } from 'react-router-dom'
 
-class ListBooksPage extends Component {
+class ListBooks extends Component {
    render() {
       const books = this.props.books
-      const updateShelf = this.props.updateShelf
+      const updateBookShelf = this.props.updateBookShelf
 
       return (
         <div className="list-books">
@@ -14,9 +14,9 @@ class ListBooksPage extends Component {
           </div>
 
           {<BookShelf books={books}
-            updateShelf={updateShelf}
+            updateBookShelf={updateBookShelf}
           />}
-          
+
         <div className="open-search">
           <Link to='/search'>Add a book</Link>
         </div>
@@ -25,4 +25,4 @@ class ListBooksPage extends Component {
    }
  }
 
-export default ListBooksPage
+export default ListBooks

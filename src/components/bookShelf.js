@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Book from './book'
+import Book from './Book'
 
 class BookShelf extends Component {
    render() {
 
    const books = this.props.books
-   const updateShelf = this.props.updateShelf
-   
+   const updateBookShelf = this.props.updateBookShelf
+
    return (
       <div className="shelfContainer">
         <div className="bookshelf">
@@ -17,7 +17,7 @@ class BookShelf extends Component {
                 books.filter(book => book.shelf === 'currentlyReading')
                 .map(book => (
                   <li key={book.id} >
-                    <Book book={book} updateShelf={updateShelf} currentShelf="currentlyReading"/>
+                    <Book book={book} updateBookShelf={updateBookShelf} currentShelf="currentlyReading"/>
                   </li>
                   ))
                  }
@@ -32,7 +32,7 @@ class BookShelf extends Component {
                 books.filter(book => book.shelf === "wantToRead")
                 .map(book => (
                   <li key={book.id} >
-                    <Book book={book} updateShelf={updateShelf} currentShelf="wantToRead"/>
+                    <Book book={book} updateBookShelf={updateBookShelf} currentShelf="wantToRead"/>
                   </li>
                   ))
                 }
@@ -47,7 +47,7 @@ class BookShelf extends Component {
                 books.filter(book => book.shelf === "read")
                 .map(book => (
                   <li key={book.id} >
-                    <Book book={book} updateShelf={updateShelf} currentShelf="read" />
+                    <Book book={book} updateBookShelf={updateBookShelf} currentShelf="read" />
                   </li>
                  ))
                 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import ListBooksPage from './components/listBooksPage'
-import BookSearchPage from './components/bookSearchPage'
-import * as BooksAPI from './components/BooksAPI'
+import ListBooks from './components/ListBooks'
+import SearchBooks from './components/SearchBooks'
+import * as BooksAPI from './utils/BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {
@@ -10,23 +10,44 @@ class BooksApp extends React.Component {
     books: []
   }
 
+/**
+ * Invoked immediately before books are
+ * inserted into the DOM
+ */
   componentDidMount() {
     this.getBooks()
   }
 
+/**
+ * Fetches all books from backend server
+ * on to bookshelf using the BooksAPI's
+ * getAll method
+ */
   getBooks = () => {
     BooksAPI.getAll().then((books) => {
       this.setState({ books: books })
     })
   }
 
-  updateShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(response => {
-       BooksAPI.getAll().then((books) => {
-         this.getBooks()
-      })
-    })
- }
+/**
+ * Updates all books on the bookshelf from backend server
+ * using the BookAPI update method when user changes
+ * the shelf for the book
+ */
+
+ updateBookShelf = (book, shelf) => {
+  const bookIndex = this.state.books.findIndex(
+       prevBook => prevBook.id === book.id
+     );
+     let newState;
+     if (bookIndex !== -1) {
+       newState = Object.assign({}, this.state.books);
+       newState[bookIndex].shelf = shelf;
+     }
+     BooksAPI.update(book, shelf);
+     this.getBooks({ newState });
+   };
+
 
  render() {
     return (
@@ -34,16 +55,17 @@ class BooksApp extends React.Component {
         <Route
           exact path='/'
           render={() => (
-            <ListBooksPage books={this.state.books} updateShelf={this.updateShelf}/>
+            <ListBooks books={this.state.books}
+            updateBookShelf={this.updateBookShelf}/>
           )}
         />
 
         <Route
           path='/search'
           render={({ history }) => (
-            <BookSearchPage
+            <SearchBooks
             books={this.state.books}
-            updateShelf={this.updateShelf}/>
+            updateBookShelf={this.updateBookShelf}/>
           )}
         />
     </div>

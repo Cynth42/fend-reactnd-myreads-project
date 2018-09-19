@@ -28,6 +28,7 @@ body, .app {
 
 .bookshelf {
   padding: 0 10px 20px;
+
 }
 
 @media (min-width: 600px) {
@@ -38,6 +39,8 @@ body, .app {
 
 .bookshelf-title {
   border-bottom: 1px solid #dedede;
+  background: #e5d112; /*#05F312;*/
+
 }
 .bookshelf-books {
   text-align: center;

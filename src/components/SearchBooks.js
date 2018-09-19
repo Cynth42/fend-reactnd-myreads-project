@@ -1,17 +1,26 @@
 import React, { Component } from 'react'
-import Book from './book'
-import * as BooksAPI from './BooksAPI'
-import escapeRegExp from 'escape-string-regexp'
+import Book from './Book'
+import * as BooksAPI from '../utils/BooksAPI'
 import { Link } from 'react-router-dom';
 
-
-class BookSearchPage extends Component {
+class SearchBooks extends Component {
 
   state = {
     query: "",
     booksShowing: []
   }
-
+/**
+ * Maeva's walkthrough webinar:
+ * https://www.youtube.com/watch?v=i6L2jLHV9j8 helped
+ * me understand how to build the search query.  The search function
+ * takes a query. The books that matched the query are displayed. If
+ * there is no match for the query, the fetch will return an empty
+ * array. Users are able to search for multiple words within the
+ * search terms.  Search works when there is no thumbnail or authors.
+ * If the query throws an error, the fetch request returns an empty
+ * array. There are no books shown when the search input box's text
+ * are deleted.
+ */
   updateQuery = (newQuery) => {
   this.setState({
     query : newQuery
@@ -36,7 +45,7 @@ class BookSearchPage extends Component {
   }
 
   render() {
-    const updateShelf = this.props.updateShelf
+    const updateBookShelf = this.props.updateBookShelf
     const books = this.props.books
 
     return (
@@ -67,7 +76,7 @@ class BookSearchPage extends Component {
                   <li key={newBook.id}>
                     <Book
                       book={newBook}
-                      updateShelf={updateShelf}
+                      updateBookShelf={updateBookShelf}
                       currentShelf={shelf}
                     />
                  </li>
@@ -80,4 +89,5 @@ class BookSearchPage extends Component {
       );
     }
 }
-export default BookSearchPage
+
+export default SearchBooks

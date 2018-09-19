@@ -5,9 +5,9 @@ class Book extends Component {
 
     render() {
       const book = this.props.book
-      const updateShelf = this.props.updateShelf
+      const updateBookShelf = this.props.updateBookShelf
       const currentShelf = this.props.currentShelf
-      let img = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : ''
+      let img = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : null
 
       return (
         <div className="book">
@@ -22,7 +22,7 @@ class Book extends Component {
             </div>
             <div className="book-shelf-changer">
               <select
-                onChange={(e) => updateShelf(book, e.target.value)}
+                onChange={(e) => updateBookShelf(book, e.target.value)}
                 value={currentShelf || "none"}
               >
                 <option value="move" disabled>Move to...</option>
