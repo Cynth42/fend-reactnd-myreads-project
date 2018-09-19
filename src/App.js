@@ -32,9 +32,8 @@ class BooksApp extends React.Component {
 /**
  * Updates all books on the bookshelf from backend server
  * using the BookAPI update method when user changes
- * the shelf for the book
+ * the shelf for the book without refreshing the browser
  */
-
  updateBookShelf = (book, shelf) => {
   const bookIndex = this.state.books.findIndex(
        prevBook => prevBook.id === book.id
@@ -47,7 +46,6 @@ class BooksApp extends React.Component {
      BooksAPI.update(book, shelf);
      this.getBooks({ newState });
    };
-
 
  render() {
     return (
