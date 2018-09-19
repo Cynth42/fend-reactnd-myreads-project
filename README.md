@@ -16,7 +16,7 @@ This is a digital bookshelf/library built with React. It is concerned with serve
 ## Installation
 
 * Clone or download the repository from Github or get the 
-  [starter code](https://github.com/Cynth42/reactnd-project-myreads-starter here
+  [starter code](https://github.com/Cynth42/reactnd-project-myreads-starter)
 
 * Go into your terminal and cd into project's folder and 
 
@@ -26,7 +26,7 @@ This is a digital bookshelf/library built with React. It is concerned with serve
 
 * A new browser window should automatically open displaying the app if not open `http://localhost:3000` in your browser.
 
-* If Node.js is not installed, download it [here]((https://nodejs.org/en/download/)
+* If Node.js is not installed, download it [here](https://nodejs.org/en/download/)
 
 * Then follow the above steps 1-4 to install its dependencies and launch the App.
 
@@ -56,8 +56,9 @@ This is a digital bookshelf/library built with React. It is concerned with serve
 
 * The search results persists on the shelves when you navigate to the main page. 
 
-* Note that the backend API is limited to a fixed set of search terms - Only these terms provided in this list will be           returned in your search results :): 
-   ###search terms:
+* Note that the backend API is limited to a fixed set of search terms - 
+  Only these terms provided on this list will be returned in your search results :) 
+                                               ### search terms:
   'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography',           'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai',           'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film',       'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey',         'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery',           'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Programming', 'React', 'Redux', 'River',       'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy',   'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'  
 
 
