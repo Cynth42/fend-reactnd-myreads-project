@@ -37,15 +37,17 @@ class BooksApp extends React.Component {
  updateBookShelf = (book, shelf) => {
   const bookIndex = this.state.books.findIndex(
        prevBook => prevBook.id === book.id
-     );
-     let newState;
+     )
+  
+     let newState
+     
      if (bookIndex !== -1) {
-       newState = Object.assign({}, this.state.books);
-       newState[bookIndex].shelf = shelf;
+       newState = Object.assign({}, this.state.books)
+       newState[bookIndex].shelf = shelf
      }
-     BooksAPI.update(book, shelf);
-     this.getBooks({ newState });
-   };
+     BooksAPI.update(book, shelf)
+     this.getBooks({ newState })
+ }
 
  render() {
     return (
